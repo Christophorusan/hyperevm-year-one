@@ -280,20 +280,20 @@
 <table class="scorecard">
   <caption>Trailing yield and scale for the reference delta-neutral dollar wrapper versus the HyperEVM surface it's about to compete on. Sources: DefiLlama yields, Hyperliquid funding history.</caption>
   <thead>
-    <tr><th>Product</th><th>Chain</th><th>Trailing 30d</th><th>Trailing 180d</th><th>Trailing 365d</th><th>TVL / capacity</th><th>Capacity scales with</th></tr>
+    <tr><th>Product</th><th>Chain</th><th>Trailing 30d</th><th>Trailing 180d</th><th>Trailing 365d</th><th>TVL</th><th>Scales with</th></tr>
   </thead>
   <tbody>
-    <tr><td>sUSDe (Ethena)</td><td>Ethereum</td><td>3.69%</td><td>4.26%</td><td>5.12%</td><td>$2.47B</td><td class="pos">CEX perp OI (uncapped)</td></tr>
+    <tr><td>sUSDe (Ethena)</td><td>Ethereum</td><td>3.69%</td><td>4.26%</td><td>5.12%</td><td>$2.47B</td><td class="pos">CEX perp OI</td></tr>
     <tr><td>Maple USDC</td><td>Ethereum</td><td>4.82%</td><td>~5%</td><td>~5%</td><td>$2.52B</td><td>RWA issuer demand</td></tr>
     <tr><td>Spark Savings USDC</td><td>Ethereum</td><td>3.65%</td><td>~4%</td><td>~4.5%</td><td>$0.49B</td><td>Sky DSR</td></tr>
     <tr><td>Compound v3 USDC</td><td>Ethereum</td><td>2.60%</td><td>~3%</td><td>~4%</td><td>$0.12B</td><td>ETH/BTC borrow demand</td></tr>
-    <tr><td>HyperLend USDC</td><td>HyperEVM</td><td>4.60%</td><td>—</td><td>—</td><td>$14.2M</td><td class="neg">HYPE on HyperEVM (capped)</td></tr>
-    <tr><td>Felix feUSDC (Morpho CDP)</td><td>HyperEVM</td><td>7.08%</td><td>—</td><td>—</td><td>$20.2M</td><td class="neg">HYPE → feUSD demand (capped)</td></tr>
-    <tr class="hype"><td>haUSDC (via corewriter → orderbook)</td><td>Hyperliquid</td><td colspan="3" style="text-align:center"><strong>7–10%*</strong> target (pre-launch)</td><td>addressable: $5.67B MAIN + $1.90B HIP-3 OI</td><td class="pos">HL OI + HIP-3 listings (uncapped)</td></tr>
+    <tr><td>HyperLend USDC</td><td>HyperEVM</td><td>4.60%</td><td>—</td><td>—</td><td>$14.2M</td><td class="neg">HYPE on HyperEVM</td></tr>
+    <tr><td>Felix feUSDC (Morpho CDP)</td><td>HyperEVM</td><td>7.08%</td><td>—</td><td>—</td><td>$20.2M</td><td class="neg">HYPE → feUSD demand</td></tr>
+    <tr class="hype"><td>haUSDC (via corewriter → orderbook)</td><td>Hyperliquid</td><td colspan="3" style="text-align:center"><strong>7–10%*</strong> target (pre-launch)</td><td>addressable: $5.67B MAIN + $1.90B HIP-3 OI</td><td class="pos">HL OI + HIP-3 listings</td></tr>
   </tbody>
 </table>
 <p style="font-size:13px;color:var(--muted);font-style:italic;margin-top:-4px;">*haUSDC is pre-launch — no live yield data. The 7–10% target range is based on blended long-spot / short-perp funding capture on BTC+ETH Hyperliquid perps (trailing 365d ≈ 8.3%), plus Treasury floor and HIP-3 equity basis as additional sources.</p>
-<p>The table splits cleanly: <strong>every HYPE-capped row sits at tens of millions; every uncapped row sits at billions.</strong> sUSDe runs <strong>3.69% on $2.47B</strong> earning off CEX funding — below the 7–10% target band haUSDC targets via HL basis + Treasury + HIP-3, on an orderbook that's already native to the chain. And because the haUSDC share token is an ERC-20 on HyperEVM, the same dollar keeps working elsewhere — posted as collateral on HyperLend or Felix, split into PT/YT on Pendle, or used as margin against a HIP-3 perp.</p>
+<p>The table splits cleanly: <strong>every HYPE-tied row sits at tens of millions; every row that scales with the book sits at billions.</strong> sUSDe runs <strong>3.69% on $2.47B</strong> off CEX funding — below the 7–10% band haUSDC targets via HL basis + Treasury + HIP-3, on an orderbook native to the chain. And the mechanic is reflexive: haUSDC flows become resting liquidity on the book, tighter books pull bigger traders, bigger traders widen funding dispersion, which lifts the yield that brought the dollars in the first place. Because the haUSDC share token is an ERC-20 on HyperEVM, the same dollar keeps working elsewhere — collateral on HyperLend or Felix, PT/YT on Pendle, margin against a HIP-3 perp.</p>
 <p>Harmonix already shipped the HYPE-denominated version: <strong>haHYPE</strong> and <strong>hakHYPE</strong> are live. haUSDC is the stablecoin sibling — pointed at the gap the next wave creates.</p>
 <p><strong>The chain already built the engine. What's missing is the wrapper that lets a dollar hold the receipt.</strong> Twelve months from now, the question isn't whether USDC on Hyperliquid finds a yield — it's whether it does so through haUSDC before anything else.</p>
 
